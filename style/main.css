@@ -1,0 +1,318 @@
+:root{
+    --bg: #1f2540;
+    --text: #ffffff;
+    --dbg: #313857;
+    --col1: #fe699f;
+    --shadow:0 5px 15px #00000042;
+    --radius: 7px;
+}
+*{
+    color: var(--text);
+    font-family: monospace;
+        caret-color: var(--col1);
+        font-size: 1rem;
+    transition: 0.4s ease-out;
+}
+body{
+    background-color: var(--bg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+
+}
+::selection{
+    background-color: var(--text);
+    color: var(--col1);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+textarea::-webkit-scrollbar{
+    background-color: transparent ;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color: var(--col1) ;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    width: 20px;
+}
+body > section, body > header{
+    width: 85%;
+}
+header{
+
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 900;
+}
+header .logo{
+    height: 100%;
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid var(--col1);
+    border-right: 2px solid var(--col1);
+}
+header button{
+    background-color: var(--col1);
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    font-size: 1.2rem;
+}
+
+/* <--------------- HEADER DONE ---------------> */ 
+/* <--------------- HEADER DONE ---------------> */ 
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} 
+.title *{
+    text-align: center;
+}
+.title h1{
+    font-size: 3.5rem;
+        letter-spacing: 1rem;
+    padding-left: 1rem;
+
+}
+.title h3{
+    font-size: 0.7rem;
+    text-align: justify;
+    text-align-last: center;
+}
+/* <--------------- TITLE DONE ---------------> */ 
+/* <--------------- TITLE DONE ---------------> */ 
+
+.field{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: flex-end;
+}
+
+.field textarea{
+    height: 30vh;
+    background-color: var(--dbg);
+    width: 100%;
+    position: relative;
+    resize: none;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    border-radius: var(--radius);
+    letter-spacing: 0.1rem;
+}
+::placeholder{
+    color: var(--text);
+    opacity: 0.6;
+}
+.field .number{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+.number button, .number input{
+    appearance: none;
+    border-radius: 2px;
+    text-align: center;
+    height: 100%;
+    box-shadow: var(--shadow);
+    
+}
+.number button{
+    height: 100%;
+    aspect-ratio: 1;
+}
+.number input{
+    background-color: var(--dbg);
+    width: 7rem;
+    padding: 0.7rem 0;
+}
+ .start, .trim{
+    background-color: var(--col1);
+
+}
+.number .clear{
+    background-color: var(--dbg);
+}
+input::-webkit-inner-spin-button{
+    appearance: none;
+}
+.face{
+    position: relative;
+    background-color: var(--dbg);
+    display: flex
+;
+    height: 100%;
+    width: fit-content;
+    border-radius: 2px;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+.number .face p{
+
+    opacity: 1;
+    font-size: 1.4rem;
+}
+.number .active p{
+    color:var(--col1);
+}
+
+.number > div{
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* <--------------- INPUT DONE ---------------> */ 
+/* <--------------- INPUT DONE ---------------> */ 
+
+.stats{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.stats .data{
+    width: calc(100% / 3);
+    background-color: var(--col1);
+    font-size: 1.2rem;
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius);
+    position: relative;
+    display: flex
+;
+    box-shadow: var(--shadow);
+    justify-content: space-between;
+}
+.stats .num{
+    font-size: 2.5rem;
+}
+.stats i {
+    font-size: 4rem;
+}
+/* <--------------- STATS DONE ---------------> */ 
+/* <--------------- STATS DONE ---------------> */ 
+.density{
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+}
+.density header{
+    height: fit-content;
+    width: fit-content;
+    padding: 0.4rem 0.8rem;
+    color: var(--col1);
+    background-color: var(--dbg);
+}
+.density .letter_dens{
+    display: flex
+;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    min-height: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+.letter_dens .letter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem;
+}
+.letter .bar{
+    background-color: var(--dbg);
+    display: flex
+;
+    justify-content: start;
+    border-radius: 50px;
+    height: 20px;
+    box-shadow: var(--shadow);
+    width: 85%;
+
+
+}
+.perc{
+    width: 10%;
+    text-wrap:nowrap;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+.letter .bar span{
+    background-color: var(--col1);
+    height: 100%;
+    border-radius: 50px;
+    width: 30%;
+}
+.saddy{
+    font-size: 6rem;
+    color: var(--dbg);
+    opacity: 0.6;
+}
+
+@media (max-width:1016px){
+    .title h1{
+        font-size: 2rem;
+    }
+}
+@media (max-width:736px){
+    html{
+        font-size: 15px;
+    }
+    body > section, body > header{
+    width: 90%;
+}
+    header{
+        height: 2.5rem;
+    }
+    .title h1{
+        letter-spacing: 0.7rem;
+        padding-left: 0.7rem;
+    }
+    .stats{
+        flex-direction: column;
+    }
+    .stats .data{
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+}
+@media (max-width:524px){
+.title h1{
+    letter-spacing: 0.4rem;
+}
+}
+
+@media (max-width:437px){
+.number input{
+    width: 5rem;
+    padding: 0.55rem 0;
+}
+.title h1{
+    font-size: 1.7rem;
+
+}
+}
+@media (max-width:392px){
+    .title h1{
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+}

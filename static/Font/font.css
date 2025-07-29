@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "font1";
+    src: url(Font.ttf);
+}
+@font-face{
+    font-family: "font2";
+    src: url(logo.ttf);
+}
+*{
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+i{
+    color: inherit;
+    font-size: inherit;
+}
